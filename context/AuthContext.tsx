@@ -55,7 +55,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const auth = getAuth();
     const result = await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(result.user, { displayName });
-    await syncUserProfile({ ...result.user, displayName } as User);
+    await syncUserProfile(result.user);
     await loadProfile(result.user.uid);
   };
 
