@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Athlete App",
+    "slug": "athlete-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "athlete-app",
+    "plugins": [
+      "expo-router",
+      "expo-system-ui",
+      "expo-asset",
+      "@react-native-firebase/app",
+      "@react-native-google-signin/google-signin"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rsa.athleteapp"
+    },
+    "android": {
+      "package": "com.rsa.athleteapp",
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "backgroundColor": "#0f172a"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "4b7edc94-03ed-4e0d-8096-0f55b55c9269"
+      }
+    }
+  }
+}

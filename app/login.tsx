@@ -61,7 +61,7 @@ export default function LoginScreen() {
             <Text className="text-4xl">⚡</Text>
           </View>
           <Text className="text-3xl font-bold text-foreground mb-2">Athlete App</Text>
-          <Text className="text-muted-foreground text-center">Track. Recover. Compete.</Text>
+          <Text className="text-muted-foreground text-center">Recover. Compete. Repeat.</Text>
         </View>
 
         {/* Mode Toggle */}

@@ -2,14 +2,25 @@ export interface Athlete {
   id: string;
   name: string;
   email: string;
+  photoUrl?: string;
   role: 'athlete' | 'coach' | 'parent' | 'captain';
   teamId?: string;
+}
+
+export interface LeaderboardEntry {
+  uid: string;
+  displayName: string;
+  photoUrl: string | null;
+  dailyStreak: number;
+  lastCheckIn: Date;
+  updatedAt: Date;
 }
 
 export interface InjuryRecord {
   id: string;
   athleteId: string;
   injuryType: string;
+  diagnosis?: string;
   dateStarted: Date;
   dateRecovered?: Date;
   severity: 'minor' | 'moderate' | 'severe';
@@ -43,6 +54,7 @@ export interface CompetitionChallenge {
   name: string;
   description: string;
   type: 'streak' | 'consistency' | 'recovery';
+  creatorId: string;
   participants: string[];
   startDate: Date;
   endDate: Date;
@@ -59,5 +71,22 @@ export interface ActivityLog {
   type: 'training' | 'recovery' | 'rest';
   duration: number;
   intensity?: 'low' | 'medium' | 'high';
+  notes?: string;
+}
+
+export interface Contact {
+  id: string;
+  athleteId: string;
+  name: string;
+  email: string;
+  role: 'friend' | 'coach' | 'parent' | 'captain';
+  fcmToken?: string;
+  addedAt: Date;
+}
+
+export interface RecoveryLog {
+  id: string;
+  athleteId: string;
+  date: Date;
   notes?: string;
 }
